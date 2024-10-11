@@ -1,0 +1,186 @@
+body {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    background-color: black; /* Background color for the body */
+}
+
+.navbar {
+    display: flex; /* Flexbox for alignment */
+    gap: 2rem; /* Space between navbar items */
+    height: 1rem;
+    /* justify-content: center; */
+    align-items: center;
+    font-weight: bold; /* Bold text */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 17px; 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    backdrop-filter: blur(5px); /* Blur effect */
+    -webkit-backdrop-filter: blur(5px); /* For Safari compatibility */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border */
+    padding: 1rem; /* Padding inside the navbar */
+    margin: 0; /* Reset margin */
+}
+
+.navbar li {
+    list-style: none; /* Remove bullet points */
+    color: #3EC5F4; /* Text color */
+}
+
+.navbar li img {
+    width: 3rem; /* Image width */
+    height: 3rem; /* Image height */
+    display: inline-block; /* Align images */
+}
+
+.container {
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Stack items vertically */
+    background-color: black; /* Background color for the container */
+    /* height: calc(100vh  ); Full viewport height minus navbar height (adjust 60px if needed) */
+    color: white;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.container .game {
+  
+  height: 27rem; /* Height for the game area */
+     margin-top: 1rem;
+    
+    width: 50%; /* Width for the game area */
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(3, 1fr);/* Creates three equal columns */
+    gap: 0;
+    border-radius: 20px;
+
+    /* border: 4px solid red; */
+}
+
+.container .game .boxes{
+    border-right: 7px solid white;
+    border-bottom: 7px solid white;
+    
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container .game .boxes:nth-child(3n){
+   border-right: none;
+}
+.container .game .boxes:nth-last-child(-n+3) {
+    border-bottom: none; /* Remove bottom border for the last row */
+}
+
+
+ 
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  will-change: transform;
+  margin: 1rem;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: white;
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+@media screen and (max-width: 426px ) {
+    .container .game{
+        height:21rem;
+        width: 80%;
+    }
+    .button-28 {
+        height: 1rem;
+        line-height: 0; /* Match line-height with button height to center text */
+        text-align: center;
+        margin-top: 1rem;
+        }
+  
+}
+  
+@media screen and (min-width: 426px ) and (max-width: 769px) {
+    .container .game{
+        margin-top: 2rem;
+        height:26rem;
+        width: 60%;
+    }
+    .button-28 {
+        height: 1rem;
+        line-height: 0; /* Match line-height with button height to center text */
+        text-align: center;
+        margin-top: 1rem;
+        }
+  
+}
+@media screen and (min-width: 769px ) and (max-width: 1025px) {
+    .container .game{
+        margin-top: 2rem;
+        height:43rem;
+        width: 60%;
+    }
+    
+}
+    
+@media screen and (min-width: 1441px ) and (max-width: 2561px) {
+    .container .game{
+        margin-top: 2rem;
+        height:100rem;
+        width: 70%;
+    }
+    .button-28 {
+        height: 10rem;
+        line-height: 0; /* Match line-height with button height to center text */
+        text-align: center;
+        margin-top: 1rem;
+        width: 10rem;
+        font-size: 35px;
+        }
+        .container .game .boxes{
+            font-size: 10rem;
+        }
+        #result{
+            margin-top: 10px ;
+            font-size: 8rem;
+        }
+}
+  
